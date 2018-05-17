@@ -22,7 +22,7 @@ $progress_file = $progress_hash. "-progress.php";
 file_put_contents("../$progress_file",'<br/><center>Initializing...<br/><img src="images/progress.gif"/></center>');
 
 // grab the updater from Github
-shell_exec('wget https://raw.github.com/jeremehancock/zipit-backup-utility-updater/master/zipit-update.php --no-check-certificate -O ../zipit-update.php');
+shell_exec('wget https://raw.github.com/goarch/zipit-backup-utility-updater/master/zipit-update.php --no-check-certificate -O ../zipit-update.php');
 
 ?>
 
