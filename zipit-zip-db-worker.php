@@ -399,7 +399,7 @@ else {
 
 // create container if it doesn't already exist
 $cont = $ostore->Container();
-$cont->Create(array('name'=>"zipit-backups-databases-$url"));
+$cont->Create(array('name'=>"$url"));
 
 // write to log
 $logtimestamp =  date("M-d-Y-h:i:s");
