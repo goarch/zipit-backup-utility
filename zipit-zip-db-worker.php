@@ -156,8 +156,8 @@ else {
 }
 
 // check database connection and database existence
-$link = mysql_connect($db_host,$db_user,$db_pass);
-$db_selected = mysql_select_db($db_name, $link);
+$link = mysqli_connect($db_host,$db_user,$db_pass,$db_name);
+$db_selected = mysqli_select_db($link, $db_name);
 
 if (!$db_selected) {
 // write to log
