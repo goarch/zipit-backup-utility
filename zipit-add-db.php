@@ -96,8 +96,8 @@ else {
 
 if (isset($_POST["Submit"])) {
 // check database connection and database existence
-   $link = mysql_connect($_POST["db_host"],$_POST["db_user"],$_POST["db_pass"]);
-   $db_selected = mysql_select_db($_POST["db_name"], $link);
+   $link = mysqli_connect($_POST["db_host"],$_POST["db_user"],$_POST["db_pass"],$_POST["db_name"]);
+   $db_selected = mysqli_select_db($link, $_POST["db_name"]);
    if (!$db_selected) {
       echo '<script>';
       echo 'alert("Database Connection Failed!\n\nCheck credentials and try again.")';
