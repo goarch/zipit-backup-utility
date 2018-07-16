@@ -45,7 +45,7 @@ catch (HttpUnauthorizedError $e) {
 
 // create container if it doesn't already exist
 $cont = $ostore->Container();
-$cont->Create(array('name'=>"zipit-backups-files-$url"));
+$cont->Create(array('name'=>"$url"));
 
 $list = $cont->ObjectList();
 
